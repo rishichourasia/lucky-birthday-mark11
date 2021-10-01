@@ -13,14 +13,18 @@ function remove() {
 }
 
 btn.addEventListener("click", function () {
+	// console.log(date.value);
+	// console.log(number.value);
 	if (number.value == 0) {
 		innerMsg("Please Enter Valid Number");
-		remove();
+		// remove();
 	} else if (date.value == "") {
 		innerMsg("Please Enter Valid Birth Date");
-		remove();
-		message.innerText = "";
-		gif.innerHTML = "";
+		console.log("here");
+		// remove();
+	} else {
+		// message.innerText = "";
+		// gif.innerHTML = "";
 		let dateValue = parseInt(date.value.replaceAll("-", ""));
 		const numberValue = number.value;
 
@@ -38,7 +42,7 @@ btn.addEventListener("click", function () {
 
 function checkLucky(value, luckyNO) {
 	const check = value % luckyNO;
-	console.log(check);
+
 	if (check == 0) {
 		luckyMsg();
 	} else {
