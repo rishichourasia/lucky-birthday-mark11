@@ -13,6 +13,7 @@ function remove() {
 }
 
 btn.addEventListener("click", function () {
+	remove();
 	// console.log(date.value);
 	// console.log(number.value);
 	if (number.value == 0) {
